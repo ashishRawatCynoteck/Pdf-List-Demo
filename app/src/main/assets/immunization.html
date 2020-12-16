@@ -1,0 +1,127 @@
+<html xmlns:text-align="http://www.w3.org/1999/xhtml"
+      xmlns:margin-bottom="http://www.w3.org/1999/xhtml" xmlns:25px xmlns:25px
+      xmlns:font-family="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Invioce</title>
+
+</head>
+
+<style type="text/css">
+.invoice-title h2, .invoice-title h3 {
+display: inline-block;
+}
+.table > tbody > tr > .no-line {
+border-top: none;
+}
+.table > thead > tr > .no-line {
+border-bottom: none;
+}
+.table > tbody > tr > .thick-line {
+border-top: 2px solid;
+}
+@page {
+size: A4;
+margin: 15px;
+}
+</style>
+
+<body>
+    <div class=container>
+         <p><?=date('d/m/Y')?></p> 
+     <div class=row>
+           <div class=col-xs-12>
+        <div class=invoice-title \>
+            <div class=row>
+                    <div class=col-lg-12 col-md-12 col-xs-12\ style=font-size: 25px; font-family: cizel;\>
+                    <b>" + "Ashish Rawat" + "</b>
+                 </div>
+             <div class=col-lg-12 col-md-12 col-xs-12 style=font-size: 20px; margin-bottom: 20px;>
+                 MBBS,MVS 
+             </div>
+         <div class=col-lg-6 col-md-6 col-xs-6 style=font-size: 20px;  > care +
+            
+         </div>
+     <div class=col-lg-6 col-md-6 col-xs-6 text-right style=font-size: 20px;>
+        <b> Mobile :" + "7351040497" + " </b>
+     </div>
+                    
+                    <div class=col-lg-6 col-md-6 col-xs-6 style= font-size: 17px;>
+                       <b> Email: " + "ashishrawat6677@gmail.com" + " </b>
+                    </div>
+                    <div class=col-lg-6 col-md-6 col-xs-6 text-right style=font-size: 20px;>
+                       <b> " + "9557207281" + "</b>
+                    </div>
+                 
+                    
+                </div>
+               
+                
+            </div>
+            <div class=row>
+               <div class=col-md-12 style=border: 1px solid black;></div>
+       </div>
+       <div class=row>
+               <div class=col-xs-3 style=font-size: 20px;>
+                   <b>For a: " + strForA + "</b>
+               </div>
+                <div class=col-xs-3 style=font-size: 20px;>
+                    <b>Age: " + strAge + "</b>
+                </div>
+                <div class=col-xs-3 style=font-size: 20px;>
+                    <b>Sex: " + strSex + "</b>
+                </div>
+                <div class=col-xs-3 style=font-size: 20px; margin-bottom: 25px;>
+                    <b>Date:"+"01-10-2020"+" <?=date('d/m/Y')?></b>
+                </div>
+
+
+                <div class=col-xs-12 style=font-size: 20px; margin-bottom: 25px;>
+                    <b>Pet Parant Name:" + "Ritik Rawat" + "</b>
+                </div>
+           <div id="output">
+
+           </div>
+           </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+           <div class=col-md-12 style=border: 1px solid black;></div>
+           <div class=col-md-12 style=font-size: 25px; text-align: center;>Address: " + "Dehradun" + ", Registration Number: " + "5029649285402" + "</div>
+       </div>
+
+
+ </div>
+ 
+</div>
+<script type=text/javascript>
+                  $(function(){
+                      window.print();
+                      window.close();
+                  });
+               </script>
+    <script>
+    // Initializing arrays
+    var users = ['Brad', 'Sarah', 'Steven'];
+    var ages = [35, 38, 56];
+    var emails = ['brad@gmail.com', 'sarah@gmail.com', 'steven@gmail.com'];
+
+    // Getting output element
+    var output = document.getElementById('output');
+
+    // Creating table tags
+    var table = "<table><thead><tr><th>Immunization Date</th><th>Vaccine Class</th><th>Age</th><th>Next Due Date</th></tr></thead><tbody>";
+
+    for (var i = 0; i < users.length; i++) {
+      table += "<tr><td>" + (i + 1) + "</td><td>" + users[i] + "</td><td>" + ages[i] + "</td><td>" + emails[i] + "</td></tr>";
+    }
+
+    table += "</tbody></table>";
+
+    // Binding output element with table var
+    output.innerHTML = table;
+  </script>
+</body>
+
+</html>
